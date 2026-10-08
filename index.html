@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#5d0710" />
+  <title>Mohamed Khalifa & Sara Eid — Engagement</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="glitter" aria-hidden="true"></div>
+
+  <main class="site">
+    <section id="cover" class="page page-cover active" aria-label="Invitation cover">
+      <div class="art-wrap cover-art">
+        <img src="invitation-cover.png" alt="Mohamed Khalifa and Sara Eid engagement invitation" />
+      </div>
+      <button id="openInvitation" class="open-btn glow-btn" type="button">
+        <span>OPEN INVITATION</span><b>✦</b>
+      </button>
+    </section>
+
+    <section id="details" class="page page-details" aria-label="Invitation details" aria-hidden="true">
+      <div class="art-wrap details-art">
+        <img src="details-page.png" alt="Invitation details and interactive buttons" />
+
+        <div class="hotspots" aria-label="Invitation actions">
+          <button class="hotspot location" data-action="location" aria-label="View location"></button>
+          <button class="hotspot rsvp" data-action="rsvp" aria-label="Confirm attendance"></button>
+          <button class="hotspot share" data-action="share" aria-label="Share invitation"></button>
+          <button class="hotspot photos" data-action="photos" aria-label="Wedding photos"></button>
+        </div>
+      </div>
+      <button id="musicToggle" class="music-toggle glow-btn" type="button" aria-label="Toggle music">♫</button>
+    </section>
+  </main>
+
+  <div id="transitionCurtain" class="transition-curtain" aria-hidden="true">
+    <div class="curtain left"></div><div class="curtain right"></div>
+    <div class="transition-shine"></div>
+  </div>
+
+  <div id="rsvpModal" class="modal" aria-hidden="true">
+    <div class="modal-card">
+      <button class="modal-close" type="button" aria-label="Close">×</button>
+      <div class="modal-jewel">◇</div>
+      <h2>Confirm Attendance</h2>
+      <p>We would love to celebrate this special evening with you.</p>
+      <form id="rsvpForm">
+        <input id="guestName" type="text" placeholder="Your name" required />
+        <select id="attendance" required>
+          <option value="" disabled selected>Will you attend?</option>
+          <option>Yes, I'll be there ✨</option>
+          <option>Sorry, I can't make it</option>
+        </select>
+        <button class="submit-btn glow-btn" type="submit">SEND CONFIRMATION</button>
+      </form>
+      <div id="rsvpThanks" class="thanks" hidden>Thank you ♡ Your response has been received on this device.</div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <audio id="bgMusic" src="love-me-like-you-do.mp3" preload="auto" loop></audio>
+  <audio id="clickSound" src="cute-kiss.wav" preload="auto"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
